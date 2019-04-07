@@ -1,0 +1,18 @@
+.section-director-view {
+    margin-top: resizeForWeb(125);
+    .image-col {
+        // width: resizeForWeb(795);
+        img {
+            width: 100%;
+        }
+    }
+    .content-col-wrapper {
+        // width: resizeForWeb(695);
+        @include screen('medium', 'min') {
+            @include center('vertical');
+        }
+        @include screen('medium') {
+            margin-top: pxtorem(20);
+        }
+    }
+}

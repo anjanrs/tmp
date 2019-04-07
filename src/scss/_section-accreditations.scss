@@ -1,0 +1,24 @@
+.section-accreditations {
+    padding-top: resizeForWeb(125);
+    padding-bottom: resizeForWeb(125);
+    background-color: #F6F6F6;
+    .accreditation-icons-row{
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: pxtorem(30);
+        .accreditation-icon {
+            position: relative;
+            height:  resizeForWeb(168);
+            text-align: center;
+            img {
+                position: absolute;
+                bottom: 0;
+                max-width: resizeForWeb(186);
+                max-height: resizeForWeb(168);
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        
+    }
+}

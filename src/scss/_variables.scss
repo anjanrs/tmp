@@ -1,0 +1,28 @@
+$max-screen-size: 1200;
+$design-size: 1920;
+
+$root-font-size: 18;
+$root-font-size-px: $root-font-size + px;
+
+//copied from bootstrap sass
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+//copied from bootstrap sass
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+$breakpoint-xl:  map-get($grid-breakpoints, "xl");
+$breakpoint-lg:  map-get($grid-breakpoints, "lg");
+$breakpoint-md:  map-get($grid-breakpoints, "md");
+$breakpoint-sm:  map-get($grid-breakpoints, "sm");
+$breakpoint-xs:  map-get($grid-breakpoints, "xs");

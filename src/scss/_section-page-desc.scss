@@ -1,0 +1,13 @@
+.section-page-desc {
+    margin-top: resizeForWeb(125);
+    text-align: center;
+    .page-desc {
+        max-width: resizeForWeb(1250);
+        margin: 0 auto;
+        h3 {
+            color: #000000;
+            font-weight: bold;
+        }
+    }
+    
+}

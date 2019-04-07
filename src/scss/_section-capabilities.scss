@@ -1,0 +1,72 @@
+.section-capabilities {
+    margin-top: resizeForWeb(300);
+    padding-bottom: resizeForWeb(100);
+    background-color: #09297E;
+    color: #fff;
+    .content-capabilities-row {
+        height: resizeForWeb(400);
+        position: relative;
+        .content-capabilities-wrapper {
+            position: absolute;
+            bottom: pxtorem(20);
+            // padding-top: resizeForWeb(100);
+            .content-text {
+                padding-top: resizeForWeb(30);
+                font-size: resizeForWeb(20);
+            }
+        }
+        .img-wrapper {
+            position: relative;
+            width: resizeForWeb(880); 
+            img {
+                position: absolute;
+                top: resizeForWeb(-150);
+                width: 100%;
+            }
+        }
+    }
+
+    .capabilities-cards-row {
+        .capabilities-card {
+            padding-top: resizeForWeb(115);
+            h5 {
+                color: #009EDD;
+                display: block;
+                position: relative;
+                height: pxtorem(30);
+                &:before {
+                    content: '';
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    border-bottom: 1px dashed #009EDD;;
+                }
+                span {
+                    display:block;
+                    float: left;
+                    position: relative;
+                    padding-right: resizeForWeb(20);
+                    &:after {
+                        content: '';
+                        background: url(../images/btn-arrow-blue.svg);
+                        width: resizeForWeb(20);
+                        height: resizeForWeb(20);
+                        background-size: 100%;
+                        position:absolute;
+                        // background-color: red;
+                        top: pxtorem(2);
+                        left: 100%;
+                    }
+                }
+                
+            }
+            .capbilities-text {
+                font-size: resizeForWeb(20);
+            }
+        }
+        
+    }
+
+    
+}

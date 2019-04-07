@@ -1,0 +1,28 @@
+.section-footer {
+    padding-bottom: resizeForWeb(100);
+    background-color: #F6F6F6;
+    .title-sm {
+        padding-bottom: pxtorem(15);
+    }
+    .contact-us-content, .quick-links {
+        font-size: resizeForWeb(23);
+        
+    }
+    .quick-links {
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    }
+
+    .footer-logo {
+        position: relative;
+        img {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: resizeForWeb(257);
+        }
+    }
+}

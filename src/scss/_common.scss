@@ -1,0 +1,62 @@
+body, html {
+  font-size: $root-font-size-px;
+}
+
+h1 {
+  font-size: resizeForWeb(90);
+  font-size: responsive resizeForWeb(60) resizeForWeb(90);
+}
+h2 {
+    font-size: resizeForWeb(60);
+    font-size: responsive resizeForWeb(50) resizeForWeb(60);
+    
+}
+h3 {
+    font-size: resizeForWeb(44);
+    font-size: responsive resizeForWeb(30) resizeForWeb(44);
+    
+}
+
+h4 {
+  font-size: resizeForWeb(28);
+  font-size: responsive resizeForWeb(20) resizeForWeb(28);
+}
+
+h5 {
+  font-size: resizeForWeb(28);
+  font-size: responsive resizeForWeb(20) resizeForWeb(22);  
+}
+
+p {
+    font-size: responsive resizeForWeb(18) resizeForWeb(20);
+}
+
+a.btn-link-blue {
+    color: #fff;
+    background-color: #009EDD;
+    padding: resizeForWeb(15) resizeForWeb(80) resizeForWeb(15) resizeForWeb(45);
+    display: block;
+    float: left;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: resizeForWeb(18);
+    &:after {
+        content: '';
+        background: url(../images/btn-arrow-white.svg);
+        width: resizeForWeb(20);
+        height: resizeForWeb(20);
+        background-size: 100%;
+        position:absolute;
+        // background-color: red;
+        top: resizeForWeb(16);
+        right: resizeForWeb(40);
+    }
+}
+
+.title-sm {
+    font-size: resizeForWeb(30);
+    color: #000000;
+    font-weight: bold;
+    display: block;
+}

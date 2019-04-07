@@ -1,0 +1,76 @@
+
+.site-header {
+	background-image: url("../images/header-bg2.png");
+    background-repeat: no-repeat;
+	height: resizeForWeb(1052);
+    background-size: cover;
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient(#0E255D, transparent); 
+		background-image: linear-gradient(#000, transparent); 
+		opacity: .7; 
+	}
+
+	.top-bar {
+        padding-top: resizeForWeb(66);
+		height: resizeForWeb(166);
+		.logo img{
+			width: resizeForWeb(257);
+		}
+		.main-navigation {
+			height: resizeForWeb(20);
+			margin-top: resizeForWeb(80);
+			ul.main-menu {
+				display: block;
+				float: right;
+				li {
+					list-style: none;
+					display: block;
+					float: left;
+					padding: 0 pxtorem(50);
+					&:last-child {
+						padding-right: 0;
+					}
+					a{
+						text-decoration: none;
+						color: #fff;
+						font-size: responsive resizeForWeb(10) resizeForWeb(18);
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+
+	.header-content {
+		height: resizeForWeb(520);
+		padding-top: resizeForWeb(170);
+		h1, h4 {
+			color: #fff;
+		}
+		h1 {
+			// font-size: responsive resizeForWeb(60) resizeForWeb(90);
+		}
+		h4 {
+			// font-size: responsive resizeForWeb(20) resizeForWeb(28);
+			margin-bottom: resizeForWeb(60);
+		}
+	}
+
+
+
+
+}
+ 
+
+@include screen('extra-large') {
+  .main-navigation  {
+    display: none
+  }
+}

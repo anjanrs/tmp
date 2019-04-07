@@ -1,0 +1,69 @@
+@function pxtorem($pixels, $root-font-size: $root-font-size) {
+  //@return ($pixels * 0.0783) + rem;
+  @return ($pixels / $root-font-size) + rem;
+}
+
+@function resizeForWeb($pixel, $unit: 'rem', $screen-size: $max-screen-size, $design-size: $design-size) {
+  @if $unit == 'rem' {
+    @return pxtorem($pixel * ($screen-size / $design-size));
+  } 
+  @else {
+    @return $pixel * ($screen-size / $design-size);
+  } 
+  
+}
+
+
+@mixin screen($size, $type: max, $pixels: $breakpoint-xs) {
+  @if $size == 'extra-small' {
+    @media screen and ($type + -width: $breakpoint-xs) {
+        @content;
+    }
+  }
+  @if $size == 'small' {
+    @media screen and ($type + -width: $breakpoint-sm) {
+        @content;
+    }
+  }
+  @else if $size == 'medium' {
+    @media screen and ($type + -width: $breakpoint-md) {
+        @content;
+    }
+  }
+  @else if $size == 'large' {
+    @media screen and ($type + -width: $breakpoint-lg) {
+        @content;
+    }
+  }
+ @else if $size == 'extra-large' {
+    @media screen and ($type + -width: $breakpoint-xl) {
+        @content;
+    }
+  }
+  @else if $size == 'custom' {
+    @media screen and ($type + -width: $pixels + px) {
+     @content;
+    }
+  }
+  @else {
+    @content;
+  }
+}
+
+@mixin center($position) {
+  position: absolute;
+  
+  @if $position == 'vertical' {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @else if $position == 'horizontal' {
+    left: 50%;
+    transform: translate(-50%);
+  }
+  @else if $position == 'both' {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
